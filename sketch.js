@@ -86,9 +86,9 @@ function Stream() {
   this.render = function() {
     this.symbols.forEach(function(symbol) {
       if (symbol.first) {
-        fill(140, 255, 170, symbol.opacity);
+        fill(255, 255, 153, symbol.opacity);
       } else {
-        fill(0, 255, 70, symbol.opacity);
+        fill(255, 255, 70, symbol.opacity);
       }
       text(symbol.value, symbol.x, symbol.y);
       symbol.rain();
