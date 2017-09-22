@@ -41,14 +41,22 @@ function Symbol(x, y, speed, first, opacity) {
   this.setToRandomSymbol = function() {
     var charType = round(random(0, 5));
     if (frameCount % this.switchInterval == 0) {
-      if (charType > 1) {
-        // set it to Katakana
+      if (charType >= 3) {
+        // set it to Arabic 
+        // (from hamza to ghain)
         this.value = String.fromCharCode(
-          0x30A0 + round(random(0, 96))
+          0x0620 + round(random(0, 26))
+        );
+      } else if (charType >= 1){
+        // (from feh to yeh)
+        this.value = String.fromCharCode(
+          0x0641 + round(random(0, 10))
         );
       } else {
-        // set it to numeric
-        this.value = round(random(0,9));
+        // set it to Arabic numeric (0 to 9)
+        this.value = String.fromCharCode(
+          0x0660 + round(random(0, 9))
+        );
       }
     }
   }
