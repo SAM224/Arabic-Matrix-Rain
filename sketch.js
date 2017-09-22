@@ -17,7 +17,6 @@ function setup() {
     x += symbolSize
   }
 
-  textFont('Consolas');
   textSize(symbolSize);
 }
 
